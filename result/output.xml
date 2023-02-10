@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230210 15:51:19.178" rpa="false" schemaversion="3">
+<suite id="s1" name="Casosdeteste" source="C:\Users\junio\OneDrive\Área de Trabalho\trabalhofinal-engsoftwareii-izaelj-gabrielj-mateusw\casosdeteste.robot">
+<test id="s1-t1" name="Caso de Teste 5: Acessar “Dashboard de Administração” como administrador" line="40">
+<kw name="Abrir Navegador" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230210 15:51:19.481" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20230210 15:51:19.488" level="INFO">Firefox driver log is always forced to to: C:\Users\junio\OneDrive\Área de Trabalho\trabalhofinal-engsoftwareii-izaelj-gabrielj-mateusw\result\geckodriver-62.log</msg>
+<status status="PASS" starttime="20230210 15:51:19.480" endtime="20230210 15:51:25.608"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230210 15:51:25.608" endtime="20230210 15:51:25.886"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:19.480" endtime="20230210 15:51:25.886"/>
+</kw>
+<kw name="Acessar o site" library="resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230210 15:51:25.888" level="INFO">Opening url 'https://kom.nevercraft.com.br/'</msg>
+<status status="PASS" starttime="20230210 15:51:25.887" endtime="20230210 15:51:28.697"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TEXTO_PAG_INICIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230210 15:51:28.697" endtime="20230210 15:51:28.837"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:25.887" endtime="20230210 15:51:28.837"/>
+</kw>
+<kw name="Clicar em login" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>myBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:28.839" level="INFO">Clicking element 'myBtn'.</msg>
+<status status="PASS" starttime="20230210 15:51:28.838" endtime="20230210 15:51:29.099"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:28.838" endtime="20230210 15:51:29.099"/>
+</kw>
+<kw name="Logar como &quot;${ADMIN_EMAIL}&quot; &quot;${ADMIN_SENHA}&quot;" library="resources" sourcename="Logar como &quot;${ADMIN_EMAIL}&quot; &quot;${ADMIN_SENHA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//input[contains(@id,'email')])[1]</arg>
+<arg>${ADMIN_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:29.101" level="INFO">Typing text 'izaelankpfer@gmail.com' into text field '(//input[contains(@id,'email')])[1]'.</msg>
+<status status="PASS" starttime="20230210 15:51:29.100" endtime="20230210 15:51:29.148"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>(//input[contains(@id,'password')])[1]</arg>
+<arg>${ADMIN_SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:29.149" level="INFO">Typing text '1284DALVO' into text field '(//input[contains(@id,'password')])[1]'.</msg>
+<status status="PASS" starttime="20230210 15:51:29.148" endtime="20230210 15:51:29.174"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='minebutton mb-2'][contains(.,'Entrar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:29.175" level="INFO">Clicking button '//button[@class='minebutton mb-2'][contains(.,'Entrar')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:29.174" endtime="20230210 15:51:29.413"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TEXT_PAG_ACCOUNT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230210 15:51:29.413" endtime="20230210 15:51:30.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TEXT_PAG_ACCOUNT_X}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:30.444" level="INFO">Clicking element '//span[@class='close col-12 text-right px-0'][contains(.,'×')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:30.443" endtime="20230210 15:51:30.657"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:29.099" endtime="20230210 15:51:30.657"/>
+</kw>
+<kw name="Acessar &quot;dashboard de Administração&quot;" library="resources">
+<kw name="Clicar em &quot;perfil&quot;" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>myBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:30.658" level="INFO">Clicking element 'myBtn'.</msg>
+<status status="PASS" starttime="20230210 15:51:30.658" endtime="20230210 15:51:30.878"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:30.658" endtime="20230210 15:51:30.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//p[@class='py-1'][contains(.,'Dashboard de Admnistração')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:30.879" level="INFO">Clicking element '//p[@class='py-1'][contains(.,'Dashboard de Admnistração')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:30.878" endtime="20230210 15:51:31.127"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TEXT_PAG_ACCOUNT_X}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:31.128" level="INFO">Clicking element '//span[@class='close col-12 text-right px-0'][contains(.,'×')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:31.127" endtime="20230210 15:51:31.341"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:30.657" endtime="20230210 15:51:31.342"/>
+</kw>
+<kw name="Checar se usuário &quot;Leguu aparece" library="resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[contains(@class,'mineinput')]</arg>
+<arg>Leguu</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:31.343" level="INFO">Typing text 'Leguu' into text field '//input[contains(@class,'mineinput')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:31.342" endtime="20230210 15:51:31.359"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class='minebutton mx-0 px-3'][contains(.,'Buscar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:31.360" level="INFO">Clicking button '//button[@class='minebutton mx-0 px-3'][contains(.,'Buscar')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:31.359" endtime="20230210 15:51:31.584"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//td[@class='text-center'][contains(.,'Leguuu')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230210 15:51:31.584" endtime="20230210 15:51:31.600"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:31.342" endtime="20230210 15:51:31.600"/>
+</kw>
+<kw name="Clicar em &quot;perfil&quot;" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>myBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:31.602" level="INFO">Clicking element 'myBtn'.</msg>
+<status status="PASS" starttime="20230210 15:51:31.601" endtime="20230210 15:51:31.829"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:31.601" endtime="20230210 15:51:31.829"/>
+</kw>
+<kw name="Deslogar" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DESLOGAR_GERAL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230210 15:51:31.831" level="INFO">Clicking element '//input[contains(@type,'submit')]'.</msg>
+<status status="PASS" starttime="20230210 15:51:31.830" endtime="20230210 15:51:32.056"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:31.829" endtime="20230210 15:51:32.056"/>
+</kw>
+<kw name="Fechar o Navegador" library="resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230210 15:51:32.393" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-108.png"&gt;&lt;img src="selenium-screenshot-108.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230210 15:51:32.057" endtime="20230210 15:51:32.393"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230210 15:51:32.394" endtime="20230210 15:51:35.267"/>
+</kw>
+<status status="PASS" starttime="20230210 15:51:32.056" endtime="20230210 15:51:35.268"/>
+</kw>
+<tag>administrador</tag>
+<tag>dashboard</tag>
+<status status="PASS" starttime="20230210 15:51:19.478" endtime="20230210 15:51:35.268"/>
+</test>
+<doc>Esta suíte de testes verifica o funcionamento das funções de usuários e administrador no site Knights of Minecraft.</doc>
+<status status="PASS" starttime="20230210 15:51:19.180" endtime="20230210 15:51:35.270"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">administrador</stat>
+<stat pass="1" fail="0" skip="0">dashboard</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Casosdeteste">Casosdeteste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
