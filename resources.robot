@@ -10,7 +10,7 @@ Library    String
 ${BROWSER}            firefox
 ${URL}                https://kom.nevercraft.com.br/
 ${DESLOGAR_GERAL}           //input[contains(@type,'submit')]
-#USUÁRIO
+#SITE
 ${TEXTO_PAG_INICIAL}       //h1[@class='fadeIn'][contains(.,'Bem-vindo, aventureiro')]
 ${TEXT_PAG_LOGIN}          //h2[@class='my-2'][contains(.,'Login')]
 ${TEXT_PAG_LOGIN_IP}       //h4[@class='mt-2 mb-0 mx-0 px-auto py-auto'][contains(.,'IP: kom.nevercraft.com.br')]
@@ -20,6 +20,7 @@ ${PAG_LOJA_TEXT}           //h2[contains(.,'Loja Mágica')]
 ${PAG_LOJA}                //a[contains(.,'Loja')]
 ${PAG_LOJA_VERIFICACAO}    //div[@class='text-center justify-self-center mx-auto my-3'][contains(.,'Sua conta ainda não está verificada. Verifique-a e depois compre Cash.')]
 ${PAG_LOJA_CODIGO}         b3e2abfc218e7badb5e7600c61b174aaa8d0ecb4
+#USUÁRIO
 ${EMAIL_USUARIO}           xoyoci7282@jobsfeel.com
 ${SENHA_USUARIO}           12345678
 #ADMIN
